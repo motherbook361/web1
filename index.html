@@ -1,1 +1,100 @@
-halo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIA Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 393px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .tabs button {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+        }
+        .tabs button.active {
+            background: #ff7043;
+            color: white;
+        }
+        .tabs button:not(.active) {
+            background: #f5f5f5;
+            color: #333;
+        }
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .list-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        .list-item:last-child {
+            border-bottom: none;
+        }
+        .list-item p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to KIA Online</h1>
+        <div class="tabs">
+            <button class="active">Buku Ibu</button>
+            <button>Buku Anak</button>
+        </div>
+        <div class="list">
+            <div class="list-item">
+                <img src="https://via.placeholder.com/50" alt="Pelayanan Antenatal">
+                <p>Pelayanan Antenatal</p>
+            </div>
+            <div class="list-item">
+                <img src="https://via.placeholder.com/50" alt="Persalinan Ibu Hamil">
+                <p>Persalinan Ibu Hamil</p>
+            </div>
+            <div class="list-item">
+                <img src="https://via.placeholder.com/50" alt="Ibu Nifas">
+                <p>Ibu Nifas</p>
+            </div>
+            <div class="list-item">
+                <img src="https://via.placeholder.com/50" alt="Ibu Menyusui">
+                <p>Ibu Menyusui</p>
+            </div>
+            <div class="list-item">
+                <img src="https://via.placeholder.com/50" alt="Keluarga Berencana">
+                <p>Keluarga Berencana</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

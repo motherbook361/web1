@@ -12,8 +12,7 @@
             background-color: #f5f5f5;
         }
         .container {
-            padding-left: 10px;
-            padding-right: 10px;
+            padding: 10px;
         }
         h1 {
             text-align: center;
@@ -40,6 +39,19 @@
         .tabs button:not(.active) {
             background: #f5f5f5;
             color: #333;
+        }
+        .search-bar {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 80%;
+            max-width: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
         }
         .list {
             margin-top: 10px;
@@ -68,52 +80,63 @@
         .list-item a:hover {
             text-decoration: underline;
         }
-        .list-item a:active {
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to KIA Online</h1>
+        <h1>Welcome to KIA Book</h1>
+
         <div class="tabs">
             <button class="active">Buku Ibu</button>
             <button onclick="window.location.href='index2.html'">Buku Anak</button>
         </div>
-        <div class="list">
-            <div class="list-item">
+
+        <div class="search-bar">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search..." 
+                oninput="filterList()">
+        </div>
+
+        <div class="list" id="list">
+            <div class="list-item" data-title="Pelayanan Antenatal">
                 <img src="https://rsudtigaraksa.tangerangkab.go.id/storage/photos/211/66b4721f934e3.png" alt="Pelayanan Antenatal">
                 <a href="Pelayanan-Antenatal.html">Pelayanan Antenatal</a>
             </div>
-            <div class="list-item">
+            <div class="list-item" data-title="Persalinan Ibu Hamil">
                 <img src="https://img-cdn.medkomtek.com/qDAwTV3eecdZfcc_wZsGPJtHGts=/0x0/smart/filters:quality(100):format(webp)/article/Dyr7FSI5F0HhccKAqLs_j/original/069894900_1539850454-6-Hal-yang-Harus-Ada-di-Tas-Ibu-Hamil-Menjelang-Persalinan-By-Africa-Studio-Shutterstock.jpg" alt="Persalinan Ibu Hamil">
-                <a 
-                href="#">
-                <!-- href="Persalinan-Ibu-Hamil.html" -->
-                Persalinan Ibu Hamil</a>
+                <a href="Persalinan-Ibu-Hamil.html">Persalinan Ibu Hamil</a>
             </div>
-            <div class="list-item">
+            <div class="list-item" data-title="Ibu Nifas">
                 <img src="https://foto.kontan.co.id/kQzmLMJ0PGM3H2IQckshQdJX1JU=/smart/2022/01/05/2092922578p.jpg" alt="Ibu Nifas">
-                <a 
-                href="#">
-                <!-- href="Ibu-Nifas.html"> -->
-                Ibu Nifas</a>
+                <a href="Ibu-Nifas.html">Ibu Nifas</a>
             </div>
-            <div class="list-item">
+            <div class="list-item" data-title="Ibu Menyusui">
                 <img src="https://akcdn.detik.net.id/visual/2023/02/10/ilustrrasi-ibu-menyusui-2_169.jpeg?w=720&q=90" alt="Ibu Menyusui">
-                <a 
-                href="#">
-                <!-- href="Ibu-Menyusui.html" -->
-                Ibu Menyusui</a>
+                <a href="Ibu-Menyusui.html">Ibu Menyusui</a>
             </div>
-            <div class="list-item">
+            <div class="list-item" data-title="Keluarga Berencana">
                 <img src="https://klikpositif.com/wp-content/uploads/2022/01/Masyarakat-Sumbar-Selalulah-Pakai-KB-Selama-Pandemi-COVID-19-KlikPositif-220620071816.jpeg" alt="Keluarga Berencana">
-                <a 
-                href="#">
-                <!-- href="Keluarga-Berencana.html" -->
-                Keluarga Berencana</a>
+                <a href="Keluarga-Berencana.html">Keluarga Berencana</a>
             </div>
         </div>
     </div>
+
+    <script>
+        function filterList() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const listItems = document.querySelectorAll('.list-item');
+
+            listItems.forEach(item => {
+                const title = item.getAttribute('data-title').toLowerCase();
+                if (title.includes(searchInput)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

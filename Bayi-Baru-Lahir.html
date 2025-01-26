@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelayanan Antenatal Care</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .back-button {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            background-color: white;
+        }
+        .back-button svg {
+            margin-right: 5px;
+        }
+        .header {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            color: black;
+        }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 15px;
+        }
+        .content p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid #ddd;
+        }
+        .menu-list li {
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-list li a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .menu-list li a:hover {
+            background-color: #f1f1f1;
+        }
+        .menu-list li a::after {
+            content: ">";
+            float: right;
+            font-weight: bold;
+            color: #999;
+        }
+        .menu-item {
+            display: block;
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 14px;
+            padding: 15px;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+            outline: none;
+            position: relative;
+        }
+        .menu-item:hover {
+            background-color: #f1f1f1;
+        }
+        .menu-item::after {
+            content: "▼";
+            position: absolute;
+            right: 15px;
+            font-weight: bold;
+            color: #999;
+            transition: transform 0.3s;
+        }
+        .menu-item.active::after {
+            transform: rotate(180deg);
+        }
+        .detail {
+            display: none;
+            padding: 10px;
+            font-size: 13px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+        .detail.show {
+            display: block;
+        }
+
+
+        .article {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tombol Back -->
+        <a href="index.html" class="back-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.854 1.146a.5.5 0 0 1 0 .708L5.207 8l6.647 6.146a.5.5 0 0 1-.708.708l-7-6.5a.5.5 0 0 1 0-.708l7-6.5a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            Back
+        </a>
+
+        <div class="header">
+            <h1>Bayi Baru Lahir</h1>
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1619159802/attached_image/5-fakta-menarik-tentang-bayi-yang-mungkin-belum-kamu-ketahui.jpg" alt="Ibu Hamil">
+        </div>
+        <div class="content">
+            <p>Bayi baru lahir adalah bayi yang baru lahir, berusia 0–28 hari.</p>
+        </div>
+        
+        <ul class="menu-list">
+            <li>
+                <button class="menu-item">Pemantauan Bayi Baru Lahir</button>
+                <div class="detail">
+                    <p>Bayi baru lahir (Neonatus) adalah bayi yang baru lahir, berusia 0–28 hari. Mereka membutuhkan penyesuaian fisiologis dari kehidupan intrauterin ke ekstrauterin.</p>
+                    <p>Bayi baru lahir normal adalah bayi yang lahir pada usia kehamilan 37–41 minggu, dengan proses kelahiran alami tanpa alat bantu.</p>
+                    <p>Berikut adalah panduan pemantauan kesehatan bayi baru lahir untuk memastikan kondisinya tetap optimal:</p>
+                    <ul>
+                        <li><strong>Napas:</strong> <br> Sehat: 40–60 kali/menit. <br> Tidak sehat: &lt; 40 atau &gt; 60 kali/menit.</li>
+                        <li><strong>Warna Kulit:</strong> <br> Sehat: Merah muda. <br> Tidak sehat: Pucat atau biru.</li>
+                        <li><strong>Kejang:</strong> <br> Sehat: Tidak ada. <br> Tidak sehat: Ada tanda kejang.</li>
+                        <li><strong>Aktivitas:</strong> <br> Sehat: Menangis jika haus atau buang air. <br> Tidak sehat: Menangis terus-menerus, lemas.</li>
+                        <li><strong>Minum ASI:</strong> <br> Sehat: Mau minum. <br> Tidak sehat: Tidak mau minum atau memuntahkan.</li>
+                        <li><strong>Hisapan Bayi:</strong> <br> Sehat: Kuat. <br> Tidak sehat: Lemah.</li>
+                        <li><strong>Kuning pada Bayi:</strong> <br> Sehat: Tidak ada atau hilang dalam 2 minggu. <br> Tidak sehat: Muncul &lt; 24 jam atau menetap.</li>
+                        <li><strong>Buang Air Kecil:</strong> <br> Sehat: 6–8 kali/hari. <br> Tidak sehat: Kurang dari 6 kali/hari.</li>
+                        <li><strong>Buang Air Besar:</strong> <br> Sehat: Encer. <br> Tidak sehat: Sangat encer atau tidak buang air besar lebih dari 3 hari.</li>
+                        <li><strong>Suhu Tubuh:</strong> <br> Sehat: 36,5°C–37,5°C. <br> Tidak sehat: Panas atau dingin seluruh tubuh.</li>
+                        <li><strong>Tali Pusat:</strong> <br> Sehat: Bersih. <br> Tidak sehat: Merah, bernanah, atau berbau.</li>
+                        <li><strong>Mata:</strong> <br> Sehat: Bening. <br> Tidak sehat: Merah, bernanah, atau ada kotoran.</li>
+                        <li><strong>Bercak Putih di Mulut:</strong> <br> Sehat: Tidak ada. <br> Tidak sehat: Ada.</li>
+                        <li><strong>Kulit:</strong> <br> Sehat: Bersih. <br> Tidak sehat: Ada bintil, bernanah, atau kemerahan.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button class="menu-item">Tanda Bahaya pada Bayi Baru Lahir</button>
+                <div class="detail">
+                    <p>Jika ditemukan 1 (satu) atau lebih tanda bahaya di bawah ini, segera bawa bayi ke Rumah Sakit:</p>
+                    <ul>
+                        <li>Tali pusat kemerahan hingga dinding perut, berbau, atau bernanah.</li>
+                        <li>Tinja bayi saat buang air besar berwarna pucat.</li>
+                        <li>Tidak mau menyusu.</li>
+                        <li>Kejang.</li>
+                        <li>Sesak napas.</li>
+                        <li>Dingin.</li>
+                        <li>Lemah.</li>
+                        <li>Kulit dan mata bayi kuning.</li>
+                        <li>Diare.</li>
+                        <li>Menangis atau merintih terus-menerus.</li>
+                        <li>Demam atau panas tinggi.</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        
+           
+        
+        <script>
+            const menuItems = document.querySelectorAll(".menu-item");
+        
+            menuItems.forEach(item => {
+                item.addEventListener("click", () => {
+                    // Tutup detail lain jika ada yang sedang terbuka
+                    const openDetail = document.querySelector(".detail.show");
+                    const activeItem = document.querySelector(".menu-item.active");
+                    if (openDetail && openDetail !== item.nextElementSibling) {
+                        openDetail.classList.remove("show");
+                        activeItem?.classList.remove("active");
+                    }
+        
+                    // Toggle detail saat ini
+                    const detail = item.nextElementSibling;
+                    detail.classList.toggle("show");
+                    item.classList.toggle("active");
+                });
+            });
+        </script>
+        
+
+    </div>
+</body>
+</html>

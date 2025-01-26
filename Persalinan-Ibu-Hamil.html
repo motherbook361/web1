@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelayanan Antenatal Care</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .back-button {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            background-color: white;
+        }
+        .back-button svg {
+            margin-right: 5px;
+        }
+        .header {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            color: black;
+        }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 15px;
+        }
+        .content p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid #ddd;
+        }
+        .menu-list li {
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-list li a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .menu-list li a:hover {
+            background-color: #f1f1f1;
+        }
+        .menu-list li a::after {
+            content: ">";
+            float: right;
+            font-weight: bold;
+            color: #999;
+        }
+        .menu-item {
+            display: block;
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 14px;
+            padding: 15px;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+            outline: none;
+            position: relative;
+        }
+        .menu-item:hover {
+            background-color: #f1f1f1;
+        }
+        .menu-item::after {
+            content: "▼";
+            position: absolute;
+            right: 15px;
+            font-weight: bold;
+            color: #999;
+            transition: transform 0.3s;
+        }
+        .menu-item.active::after {
+            transform: rotate(180deg);
+        }
+        .detail {
+            display: none;
+            padding: 10px;
+            font-size: 13px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+        .detail.show {
+            display: block;
+        }
+
+
+        .article {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tombol Back -->
+        <a href="index.html" class="back-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.854 1.146a.5.5 0 0 1 0 .708L5.207 8l6.647 6.146a.5.5 0 0 1-.708.708l-7-6.5a.5.5 0 0 1 0-.708l7-6.5a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            Back
+        </a>
+
+        <div class="header">
+            <h1>Persalinan  pada Ibu Hamil</h1>
+            <img src="https://img-cdn.medkomtek.com/qDAwTV3eecdZfcc_wZsGPJtHGts=/0x0/smart/filters:quality(100):format(webp)/article/Dyr7FSI5F0HhccKAqLs_j/original/069894900_1539850454-6-Hal-yang-Harus-Ada-di-Tas-Ibu-Hamil-Menjelang-Persalinan-By-Africa-Studio-Shutterstock.jpg" alt="Ibu Hamil">
+        </div>
+        <div class="content">
+            <p>Persalinan pada ibu hamil adalah proses persalinan yang dilakukan dengan memperhatikan prinsip keselamatan ibu dan bayi, yang ditolong oleh tenaga kesehatan terlatih di fasilitas kesehatan yang memenuhi standar pelayanan.</p>
+        </div>
+        
+        <ul class="menu-list">
+            <li>
+                <button class="menu-item">Prinsip Persalinan Pada Ibu Hamil</button>
+                <div class="detail">
+                    <p>Prinsip persalinan aman adalah memperhatikan prinsip keselamatan ibu dan bayi, yang ditolong oleh tenaga kesehatan terlatih di fasilitas kesehatan yang memenuhi standar pelayanan.</p>
+                    <ul>
+                        <li><strong>Persalinan dengan tenaga kesehatan terlatih:</strong> Ditangani oleh bidan, dokter, atau perawat yang kompeten.</li>
+                        <li><strong>Penyediaan fasilitas yang memadai:</strong> Fasilitas harus memenuhi standar pelayanan kesehatan.</li>
+                        <li><strong>Kesiapsiagaan terhadap komplikasi:</strong> Fasilitas dilengkapi obat-obatan dan peralatan resusitasi.</li>
+                        <li><strong>Sistem rujukan yang efektif:</strong> Terdapat transportasi dan kerja sama antar fasilitas kesehatan.</li>
+                        <li><strong>Penyuluhan dan informasi:</strong> Edukasi ibu dan keluarga untuk mengenali tanda bahaya.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button class="menu-item">Langkah-Langkah Proses Melahirkan</button>
+                <div class="detail">
+                    <p>Langkah langkah proses melahirkan.</p>
+                    <ul>
+                        <li><strong>Mulas teratur sebagai tanda awal persalinan.</strong></li>
+                        <li><strong>Durasi persalinan biasanya lebih cepat pada kehamilan berikutnya.</strong></li>
+                        <li><strong>Ibu dapat memilih pendamping dan posisi persalinan.</strong></li>
+                        <li><strong>IMD dilakukan segera setelah bayi lahir selama 1 jam.</strong></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button class="menu-item">Persiapan Melahirkan</button>
+                <div class="detail">
+                    <p>Persiapan melahirkan.</p>
+                    <ul>
+                        <li><strong> tanggal perkiraan persalinan kepada dokter atau bidan.</strong></li>
+                        <li><strong>Persiapkan dana cadangan dan dokumen penting seperti KTP dan KK.</strong></li>
+                        <li><strong>Rencanakan persalinan di fasilitas kesehatan dengan tenaga medis profesional.</strong></li>
+                        <li><strong>Siapkan donor darah jika diperlukan.</strong></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button class="menu-item">Tanda Bahaya pada Persalinan</button>
+                <div class="detail">
+                    <p>Tanda Bahaya pada Persalinan.</p>
+                    <ul>
+                        <li><strong> lewat jalan lahir.</strong></li>
+                        <li><strong>Ibu mengalami kejang.</strong></li>
+                        <li><strong>Air ketuban hijau dan berbau.</strong></li>
+                        <li><strong>Tali pusar atau tangan bayi keluar dari jalan lahir.</strong></li>
+                        <li><strong>Ibu gelisah atau kesakitan hebat.</strong></li>
+                    </ul>
+                </div>
+            </li> 
+        </ul>
+        
+        <script>
+            const menuItems = document.querySelectorAll(".menu-item");
+        
+            menuItems.forEach(item => {
+                item.addEventListener("click", () => {
+                    // Tutup detail lain jika ada yang sedang terbuka
+                    const openDetail = document.querySelector(".detail.show");
+                    const activeItem = document.querySelector(".menu-item.active");
+                    if (openDetail && openDetail !== item.nextElementSibling) {
+                        openDetail.classList.remove("show");
+                        activeItem?.classList.remove("active");
+                    }
+        
+                    // Toggle detail saat ini
+                    const detail = item.nextElementSibling;
+                    detail.classList.toggle("show");
+                    item.classList.toggle("active");
+                });
+            });
+        </script>
+        
+
+    </div>
+</body>
+</html>

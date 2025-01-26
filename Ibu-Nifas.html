@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelayanan Antenatal Care</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .back-button {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            background-color: white;
+        }
+        .back-button svg {
+            margin-right: 5px;
+        }
+        .header {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            color: black;
+        }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 15px;
+        }
+        .content p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid #ddd;
+        }
+        .menu-list li {
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-list li a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .menu-list li a:hover {
+            background-color: #f1f1f1;
+        }
+        .menu-list li a::after {
+            content: ">";
+            float: right;
+            font-weight: bold;
+            color: #999;
+        }
+        .menu-item {
+            display: block;
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 14px;
+            padding: 15px;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+            outline: none;
+            position: relative;
+        }
+        .menu-item:hover {
+            background-color: #f1f1f1;
+        }
+        .menu-item::after {
+            content: "▼";
+            position: absolute;
+            right: 15px;
+            font-weight: bold;
+            color: #999;
+            transition: transform 0.3s;
+        }
+        .menu-item.active::after {
+            transform: rotate(180deg);
+        }
+        .detail {
+            display: none;
+            padding: 10px;
+            font-size: 13px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+        .detail.show {
+            display: block;
+        }
+
+
+        .article {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tombol Back -->
+        <a href="index.html" class="back-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.854 1.146a.5.5 0 0 1 0 .708L5.207 8l6.647 6.146a.5.5 0 0 1-.708.708l-7-6.5a.5.5 0 0 1 0-.708l7-6.5a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            Back
+        </a>
+
+        <div class="header">
+            <h1>Masa Nifas </h1>
+            <img src="https://foto.kontan.co.id/kQzmLMJ0PGM3H2IQckshQdJX1JU=/smart/2022/01/05/2092922578p.jpg" alt="Ibu Hamil">
+        </div>
+        <div class="content">
+            <p>Masa nifas adalah masa dimulai setelah kelahiran plasenta dan berakhir ketika alat-alat kandungan kembali seperti keadaan sebelum hamil yang berlangsung kira-kira 6 minggu.</p>
+        </div>
+        
+        <ul class="menu-list">
+            <li>
+                <button class="menu-item">Masa Nifas</button>
+                <div class="detail">
+                    <p>Masa nifas adalah masa dimulai setelah kelahiran plasenta dan berakhir ketika alat-alat kandungan kembali seperti keadaan sebelum hamil yang berlangsung kira-kira 6 minggu.</p>
+                </div>
+            </li>
+            <li>
+                <button class="menu-item">Depresi Pasca Melahirkan</button>
+                <div class="detail">
+                    <ul>
+                        <li><strong>Baby blues:</strong> Terjadi 1–2 minggu setelah melahirkan, gejalanya perasaan tidak stabil, mudah menangis, sulit tidur, cemas, dan mudah tersinggung.</li>
+                        <li><strong>Depresi pasca melahirkan:</strong> Terjadi dalam 2–4 minggu pasca melahirkan, gejalanya meliputi sedih, lelah, sulit konsentrasi, gangguan tidur, perasaan bersalah, hingga pikiran melukai diri atau bayi.</li>
+                        <li><strong>Depresi berat:</strong> Muncul dalam 48–72 jam pertama pasca melahirkan, ditandai perubahan perilaku ekstrem, gangguan tidur, halusinasi, dan delusi.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button class="menu-item">Perawatan Ibu Nifas</button>
+                <div class="detail">
+                    <ul>
+                        <li><strong>Kunjungan Nifas:</strong> Perawatan ibu nifas mulai 6 jam sampai 42 hari pasca bersalin oleh tenaga kesehatan minimal 4 kali kunjungan nifas:
+                            <ul>
+                                <li>Pertama: 6 jam - 2 hari setelah persalinan</li>
+                                <li>Kedua: 3 - 7 hari setelah persalinan</li>
+                                <li>Ketiga: 8 – 28 hari setelah persalinan</li>
+                                <li>Keempat: 29-42 hari setelah persalinan</li>
+                            </ul>
+                        </li>
+                        <li><strong>Pelayanan kesehatan ibu nifas meliputi:</strong>
+                            <ul>
+                                <li>Menanyakan kondisi ibu nifas secara umum, pengukuran tekanan darah, suhu tubuh, pernapasan, dan nadi</li>
+                                <li>Pemeriksaan lokhia dan perdarahan</li>
+                                <li>Pemeriksaan kondisi jalan lahir dan tanda infeksi</li>
+                                <li>Pemeriksaan kontraksi rahim dan tinggi fundus uteri</li>
+                                <li>Pemeriksaan payudara dan anjuran pemberian ASI Eksklusif</li>
+                                <li>Pemberian kapsul vitamin A (2 kapsul)</li>
+                                <li>Pelayanan kontrasepsi Pasca Persalinan</li>
+                                <li>Konseling</li>
+                                <li>Tatalaksana pada ibu nifas sakit atau ibu nifas dengan komplikasi</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>        
+        
+        <script>
+            const menuItems = document.querySelectorAll(".menu-item");
+        
+            menuItems.forEach(item => {
+                item.addEventListener("click", () => {
+                    // Tutup detail lain jika ada yang sedang terbuka
+                    const openDetail = document.querySelector(".detail.show");
+                    const activeItem = document.querySelector(".menu-item.active");
+                    if (openDetail && openDetail !== item.nextElementSibling) {
+                        openDetail.classList.remove("show");
+                        activeItem?.classList.remove("active");
+                    }
+        
+                    // Toggle detail saat ini
+                    const detail = item.nextElementSibling;
+                    detail.classList.toggle("show");
+                    item.classList.toggle("active");
+                });
+            });
+        </script>
+        
+
+    </div>
+</body>
+</html>

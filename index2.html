@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIA Online</title>
+    <title>KIA Online - Buku Anak</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,6 +41,19 @@
             background: #f5f5f5;
             color: #333;
         }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
         .list {
             margin-top: 10px;
         }
@@ -75,21 +88,95 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to KIA Online</h1>
+        <h1>Welcome to KIA Book</h1>
         <div class="tabs">
             <button onclick="window.location.href='index.html'">Buku Ibu</button>
             <button class="active">Buku Anak</button>
         </div>
-        <div class="list">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search..." oninput="filterList()">
+        </div>
+        <div class="list" id="listContainer">
             <div class="list-item">
-                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1619159802/attached_image/5-fakta-menarik-tentang-bayi-yang-mungkin-belum-kamu-ketahui.jpg" alt="Pelayanan Antenatal">
-                <a 
-                href="#">
-                <!-- href="Bayi-Baru-Lahir.html"> -->
-                Bayi Baru Lahir</a>
+                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1619159802/attached_image/5-fakta-menarik-tentang-bayi-yang-mungkin-belum-kamu-ketahui.jpg" alt="Bayi Baru Lahir">
+                <a href="Bayi-Baru-Lahir.html">Bayi Baru Lahir</a>
             </div>
-    
+            <div class="list-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgMszAqHysCTQelfqw21rQgDeAz49abfctA&s" alt="Perawatan Bayi Usia 29 Hari – 3 Bulan">
+                <a href="Perwatan-Bayi-Usia-29-Hari-3-Bulan.html">Perawatan Bayi Usia 29 Hari – 3 Bulan</a>
+            </div>
+            <div class="list-item">
+                <img src="https://akcdn.detik.net.id/visual/2019/12/20/7918c84f-2677-425c-a623-5c8e5b5cfa95_169.jpeg?w=650" alt="Perawatan Bayi Usia 3 – 6 Bulan">
+                <a href="Perawatan-Bayi-Usia-3-6-Bulan.html">Perawatan Bayi Usia 3 – 6 Bulan</a>
+            </div>
+            <div class="list-item">
+                <img src="https://admin.melindahospital.com/storage/images/articles/1707982322261.webp" alt="Perawatan Bayi Usia 6 – 9 Bulan">
+                <a href="Perawatan-Bayi-Usia-6-9-Bulan.html">Perawatan Bayi Usia 6 – 9 Bulan</a>
+            </div>
+            <div class="list-item">
+                <img src="https://d24eqpince6acm.cloudfront.net/articles/perkembangan-bayi-9-bulan.webp" alt="Perawatan Bayi Usia 9 – 12 Bulan">
+                <a href="Perawatan-Bayi-Usia-9-12-Bulan.html">Perawatan Bayi Usia 9 – 12 Bulan</a>
+            </div>
+            <div class="list-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqsluQDlh2QMsj_0m6k7q4Wd_B5xFS4j_oyA&s" alt="Perawatan Anak Usia 12 – 18 Bulan">
+                <a href="Perawatan-Anak-Usia-12-18-Bulan.html">Perawatan Anak Usia 12 – 18 Bulan</a>
+            </div>
+            <div class="list-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtqYGim9J6aOFger28UjYQ59etMW93m9uq9Q&s" alt="Perawatan Anak Usia 18 – 24 Bulan">
+                <a href="Perawatan-Anak-Usia-18-24-Bulan.html">Perawatan Anak Usia 18 – 24 Bulan</a>
+            </div>
+            <div class="list-item">
+                <img src="https://d24eqpince6acm.cloudfront.net/articles/stimulasi%20bayi%202%20tahun.webp" alt="Perawatan Anak Usia 2 – 3 Tahun">
+                <a href="Perawatan-Anak-Usia-2-3-Tahun.html">Perawatan Anak Usia 2 – 3 Tahun</a>
+            </div>
+            <div class="list-item">
+                <img src="https://img-cdn.medkomtek.com/x072KEzCbRJTLfw3YJBnfpQ6iIk=/510x395/smart/filters:quality(100):format(webp)/article/ufi7W938vJ6q8QYAel97C/original/1663285594-Tumbuh%20Kembang%20Balita%204%20Tahun.jpg" alt="Perawatan Anak Usia 3 – 4 Tahun">
+                <a href="Perawatan-Anak-Usia-3-4-Tahun.html">Perawatan Anak Usia 3 – 4 Tahun</a>
+            </div>
+            <div class="list-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-_lbfhv4t8ZmNS7Lv_TITCRhpOZppvNKVvQ&s" alt="Perawatan Anak Usia 4 – 5 Tahun">
+                <a href="Perawatan-Anak-Usia-4-5-Tahun.html">Perawatan Anak Usia 4 – 5 Tahun</a>
+            </div>
+            <div class="list-item">
+                <img src="https://akcdn.detik.net.id/visual/2023/10/30/ilustrasi-ibu-dan-anak_43.jpeg?w=720&q=90" alt="Perawatan Anak Usia 5 – 6 Tahun">
+                <a href="Perawatan-Anak-Usia-5-6-Tahun.html">Perawatan Anak Usia 5 – 6 Tahun</a>
+            </div>
+            <div class="list-item">
+                <img src="https://www.appletreebsd.com/wp-content/uploads/2018/05/Simak-Ini-Tahapan-Perkembangan-Bahasa-Anak-Usia-2-hingga-6-Tahun.jpg" alt="Perkembangan Bahasa">
+                <a href="Perkembangan-Bahasa.html">Perkembangan Bahasa</a>
+            </div>
+            <div class="list-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYfVbcJ7thczl8aHxKdI6ShJycvZCu83calQ&s" alt="Perkembangan Sosial">
+                <a href="Perkembangan-Sosial.html">Perkembangan Sosial</a>
+            </div>
+            <div class="list-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR06_Nbo9dvJ7YXTkfX9T6ETh536TD4We9xiA&s" alt="Pemenuhan Gizi">
+                <a href="Pemenuhan-Gizi.html">Pemenuhan Gizi</a>
+            </div>
+            <div class="list-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQePy0CnZGdzA5IRP6OsyhsrcGjsNMODDgpJg&s" alt="Suplementasi Kapsul Vitamin A pada Bayi dan Anak">
+                <a href="Suplementasi-Kapsul-Vitamin-A.html">Suplementasi Kapsul Vitamin A pada Bayi dan Anak</a>
+            </div>
+            <div class="list-item">
+                <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1700464054/attached_image/imunisasi-bayi-manfaat-jadwal-dan-efek-sampingnya.jpg" alt="Imunisasi Pada Anak">
+                <a href="Imunisasi-Pada-Anak.html">Imunisasi Pada Anak</a>
+            </div>
         </div>
     </div>
+    <script>
+        function filterList() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const listItems = document.querySelectorAll('.list-item');
+
+            listItems.forEach(item => {
+                const text = item.querySelector('a').innerText.toLowerCase();
+                if (text.includes(searchInput)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
